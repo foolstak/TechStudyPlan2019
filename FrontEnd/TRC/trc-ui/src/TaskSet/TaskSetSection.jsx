@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import './TaskSetSection.css';
-import TaskSetButton from "./TaskSetButton";
+import Button from "../common/Button";
 
 class TaskSetSection extends Component{
     render(){
         var noOfTaskSetsToRender = this.props.noOfTaskSets;
         var rows = [];
         for(var i = 0 ; i < noOfTaskSetsToRender; i++){
-            rows.push(<TaskSetButton />);
+            rows.push(<Button key={ 'ts-' + i } componentName={ 'TaskSet' }/>);
         }
         return (
         <div className="TaskSetSection-main">

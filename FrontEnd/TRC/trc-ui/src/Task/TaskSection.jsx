@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import './TaskSection.css';
-import TaskButton from './TaskButton';
+import Button from "../common/Button";
 
 class TaskSection extends Component{
     render(){
         var noOfTasksToRender = this.props.noOfTasks;
-        var rows  = [];
+        var taskList  = [];
         for(let i= 0; i < noOfTasksToRender; i++){
-            rows.push(<TaskButton />);
+            taskList.push(<Button key={ 't-' + i } componentName= { 'Task' }/>);
         }
         return (
         <div className="TaskSection-main">
             <h3>Tasks</h3>
-            { rows }
+            { taskList }
             </div>
         );
     }
