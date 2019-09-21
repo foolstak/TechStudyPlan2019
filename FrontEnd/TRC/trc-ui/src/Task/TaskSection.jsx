@@ -6,8 +6,8 @@ class TaskSection extends Component{
     render(){
         var noOfTasksToRender = this.props.noOfTasks;
         var taskList  = [];
-        for(let i= 0; i < noOfTasksToRender; i++){
-            taskList.push(<Button key={ 't-' + i } componentName= { 'Task' }/>);
+        for(let i= 1; i <= noOfTasksToRender; i++){
+            taskList.push(<Button key={ i } componentKey={ i } componentName={ 'Task' }/>);
         }
         return (
         <div className="TaskSection-main">
