@@ -1,24 +1,20 @@
 import React, { Component } from "react";
 import './TaskSetSection.css';
-import TaskSet from './TaskSet';
+import TaskSetButton from "./TaskSetButton";
 
 class TaskSetSection extends Component{
     render(){
-        return <div className="TaskSetSection-main">
+        var noOfTaskSetsToRender = this.props.noOfTaskSets;
+        var rows = [];
+        for(var i = 0 ; i < noOfTaskSetsToRender; i++){
+            rows.push(<TaskSetButton />);
+        }
+        return (
+        <div className="TaskSetSection-main">
             <h3>TaskSets</h3>
-            <button className="TaskSet-row"><TaskSet /></button>
-            <br></br>
-            <button className="TaskSet-row"><TaskSet /></button>
-            <br></br>
-            <button className="TaskSet-row"><TaskSet /></button>
-            <br></br>
-            <button className="TaskSet-row"><TaskSet /></button>
-            <br></br>
-            <button className="TaskSet-row"><TaskSet /></button>
-            <br></br>
-            <button className="TaskSet-row"><TaskSet /></button>
-            <br></br>
-            </div>;
+                { rows }
+            </div>
+        );
     }
 }
 export default TaskSetSection;
