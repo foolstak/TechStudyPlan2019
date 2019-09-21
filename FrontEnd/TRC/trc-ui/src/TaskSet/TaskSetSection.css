@@ -3,24 +3,9 @@
     width: 30vw;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     justify-content: middle;
     font-size: calc(5px + 2vmin);
     border-right: 2px #ccc solid;
     color: #000;
-  }
-
-  .TaskSet-row{
-    background:magenta;
-    width: 90%;
-    height: 3vw;
-    color: #000;
-    border-radius: 10px;
-    border-color: magenta;
-    font-size: calc(5px + 2vmin);
-    padding: 7px 0px 7px 0px;
-  }
-
-  .button-common{
-    margin: 5px;
   }

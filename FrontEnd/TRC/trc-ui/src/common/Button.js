@@ -12,15 +12,15 @@ class Button extends Component{
         switch(component){
             case 'Task':
                 return (
-                    <button className="Button-common TaskButton-common TaskSet-row"><Task /></button>
+                    <button className="Button-common TaskButton-common"><Task /></button>
                 );
             case 'TaskPack':
                 return (
-                    <button className="Button-common TaskPackButton-common TaskSet-row"><TaskPack /></button>
+                    <button className="Button-common TaskPackButton-common"><TaskPack /></button>
                 );
             case 'TaskSet': 
                 return (
-                    <button className="Button-common TaskSetButton-common TaskSet-row"><TaskSet /></button>
+                    <button className="Button-common TaskSetButton-common"><TaskSet /></button>
                 );
             
             default: 
