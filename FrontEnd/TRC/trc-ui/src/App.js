@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TaskPackSection from './TaskPack/TaskPackSection';
 import TaskSetSection from './TaskSet/TaskSetSection';

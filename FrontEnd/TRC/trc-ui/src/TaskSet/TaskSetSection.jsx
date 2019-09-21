@@ -6,17 +6,17 @@ class TaskSetSection extends Component{
     render(){
         return <div className="TaskSetSection-main">
             <h3>TaskSets</h3>
-            <a href="#" className="TaskSet-row"><TaskSet /></a>
+            <button className="TaskSet-row"><TaskSet /></button>
             <br></br>
-            <a href="#" className="TaskSet-row"><TaskSet /></a>
+            <button className="TaskSet-row"><TaskSet /></button>
             <br></br>
-            <a href="#" className="TaskSet-row"><TaskSet /></a>
+            <button className="TaskSet-row"><TaskSet /></button>
             <br></br>
-            <a href="#" className="TaskSet-row"><TaskSet /></a>
+            <button className="TaskSet-row"><TaskSet /></button>
             <br></br>
-            <a href="#" className="TaskSet-row"><TaskSet /></a>
+            <button className="TaskSet-row"><TaskSet /></button>
             <br></br>
-            <a href="#" className="TaskSet-row"><TaskSet /></a>
+            <button className="TaskSet-row"><TaskSet /></button>
             <br></br>
             </div>;
     }

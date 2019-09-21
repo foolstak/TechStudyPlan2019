@@ -6,11 +6,11 @@ class TaskPackSection extends Component{
     render(){
         return <div  className="TaskPackSection-main">
                 <h3>TaskPacks</h3>
-                <a href="#" className="TaskPack-row"><TaskPack /></a>
+                <button className="TaskPack-row"><TaskPack /></button>
                 <br></br>
-                <a href="#" className="TaskPack-row"><TaskPack /></a>
+                <button className="TaskPack-row"><TaskPack /></button>
                 <br></br>
-                <a href="#" className="TaskPack-row"><TaskPack /></a>
+                <button className="TaskPack-row"><TaskPack /></button>
                 <br></br>  
             </div>;
     }

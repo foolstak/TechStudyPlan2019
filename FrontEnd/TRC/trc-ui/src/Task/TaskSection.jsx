@@ -6,25 +6,25 @@ class TaskSection extends Component{
     render(){
         return <div className="TaskSection-main">
             <h3>Tasks</h3>
-            <a href="#" className="Task-row"><Task /></a>
+            <button className="Task-row"><Task /></button>
             <br></br>
-            <a href="#" className="Task-row"><Task /></a>
+            <button className="Task-row"><Task /></button>
             <br></br>
-            <a href="#" className="Task-row"><Task /></a>
+            <button className="Task-row"><Task /></button>
             <br></br>
-            <a href="#" className="Task-row"><Task /></a>
+            <button className="Task-row"><Task /></button>
             <br></br>
-            <a href="#" className="Task-row"><Task /></a>
+            <button className="Task-row"><Task /></button>
             <br></br>
-            <a href="#" className="Task-row"><Task /></a>
+            <button className="Task-row"><Task /></button>
             <br></br>
-            <a href="#" className="Task-row"><Task /></a>
+            <button className="Task-row"><Task /></button>
             <br></br>
-            <a href="#" className="Task-row"><Task /></a>
+            <button className="Task-row"><Task /></button>
             <br></br>
-            <a href="#" className="Task-row"><Task /></a>
+            <button className="Task-row"><Task /></button>
             <br></br>
-            <a href="#" className="Task-row"><Task /></a>
+            <button className="Task-row"><Task /></button>
             <br></br>
             </div>;
     }
