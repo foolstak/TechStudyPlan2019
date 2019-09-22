@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import TaskPackSection from './TaskPack/TaskPackSection';
-import TaskSetSection from './TaskSet/TaskSetSection';
-import TaskSection from './Task/TaskSection';
+import TaskPackSection from './components/TaskPack/TaskPackSection';
+import TaskSetSection from './components/TaskSet/TaskSetSection';
+import TaskSection from './components/Task/TaskSection';
 
 function App() {
-  var noOfTaskPacks = 3;
-  var noOfTaskSets = 5;
-  var noOfTasks = 10;
+  var noOfTaskPacks = 0;
+  var noOfTaskSets = 0;
+  var noOfTasks = 0;
   return (
     <div className="App">
       <header className="App-header">
