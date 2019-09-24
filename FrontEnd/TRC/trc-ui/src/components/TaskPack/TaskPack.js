@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import './TaskPack.css';
 
+
+
 class TaskPack extends Component{    
 
     constructor(props){
@@ -9,17 +11,23 @@ class TaskPack extends Component{
     }
 
     onTaskPackClicked(){
-        var taskSets = [...new Set(this.props.taskSets)].filter(x => Number(x));
-        console.log("TaskPack " + this.props.number + " clicked");
-        console.log("Associated tasksets: " + taskSets);
+        // var taskSetIdPriorityMap = [...this.props.taskSetIdPriorityMap];
+        var taskSets = [...this.props.taskSets];
+        var taskPackId = this.props.taskPackId;
+        console.log("TaskPack " + taskPackId + " clicked");
+        console.log("Associated tasksets: ");
+        taskSets.forEach(taskSet => {
+            console.log(taskSet.taskSetName);
+        })
     }
 
     render(){
         
         return (
         <div className="TaskPack-main" onClick={ this.onTaskPackClicked }>
-           TaskPack { this.props.number }
+           {this.props.taskPackName}
         </div>
+        
         );
     }
 }
