@@ -1,8 +1,12 @@
 import React from "react";
 import './TaskPackSection.css';
 import TaskPack from "./TaskPack";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+
+const onAddTaskPackButtonClicked = () => {
+    console.log("Add TaskPAck button clicked");
+}
 
 function TaskPackSection(props){
 
@@ -12,6 +16,9 @@ function TaskPackSection(props){
     // let taskSetId = taskPacks.taskSetIdPriorityMap.taskSetId;
 
     console.log(taskPacks);
+    console.log(taskSets);
+    console.log(taskSetIdPriorityMap);
+
     let taskPackList = []; 
     
     taskPacks.forEach(element => {
@@ -26,8 +33,10 @@ function TaskPackSection(props){
     return (
     <div  className="TaskPackSection-main">
         <h3>TaskPacks</h3>
-        { taskPackList.length > 0? taskPackList : <p>There are no TaskPacks defined. Define some to  see them below</p> }
-        <FontAwesomeIcon icon={ faPlusCircle } />
+        <div className="TaskPackSection-taskPackList">
+            { taskPackList.length > 0? taskPackList : <p>There are no TaskPacks defined. Define some to  see them below</p> }
+        </div>
+        <button id="addTaskPackButton" onClick = { onAddTaskPackButtonClicked }><FontAwesomeIcon icon={ faPlusCircle } /></button>
     </div>
     );
 }

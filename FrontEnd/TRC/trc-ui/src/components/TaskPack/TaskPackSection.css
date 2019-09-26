@@ -1,4 +1,4 @@
-.TaskPackSection-main{
+.TaskPackSection-taskPackList{
     background-color: #fff;
     width: 30vw;
     display: flex;
@@ -8,4 +8,14 @@
     font-size: calc(5px + 2vmin);
     color: #000;
     border-right: 2px #ccc solid;
+  }
+
+  .TaskPackSection-main{
+    position: relative;
+  }
+
+  #addTaskPackButton{
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }

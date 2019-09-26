@@ -1,4 +1,4 @@
-.TaskSection-main{
+.TaskSection-taskList{
     background-color: #fff;
     width: 30vw;
     display: flex;
@@ -7,4 +7,14 @@
     justify-content: middle;
     font-size: calc(5px + 2vmin);
     color: #000;
+  }
+
+  .TaskSection-main{
+    position: relative;
+  }
+  
+  #addTaskButton{
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }

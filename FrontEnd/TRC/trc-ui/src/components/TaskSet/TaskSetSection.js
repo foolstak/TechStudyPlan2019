@@ -2,6 +2,12 @@ import React from "react";
 import './TaskSetSection.css';
 import Utils from '../../common/utils';
 import TaskSet from './TaskSet';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+
+const onTaskSetButtonClicked = () => {
+    console.log("add taskset button clicked");
+}
 
 function TaskSetSection(props){
     
@@ -19,8 +25,11 @@ function TaskSetSection(props){
         return (
         <div className="TaskSetSection-main">
             <h3>TaskSets</h3>
+            <div className="TaskSetSection-taskSetList">
                { rows.length > 0 ? rows : <p>There are no TaskSets. Define some to see them below</p> }
             </div>
+            <button id="addTaskSetButton" onClick={ onTaskSetButtonClicked }><FontAwesomeIcon icon={ faPlusCircle } /></button>
+        </div>
         );
     
 }
