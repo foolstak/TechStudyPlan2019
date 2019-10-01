@@ -18,11 +18,11 @@ class TaskPack extends Component{
         console.log("Associated tasksets: ");
         taskSets.forEach(taskSet => {
             console.log(taskSet.taskSetName);
-        })
+        });
+        this.props.onTaskPackClicked(this.props.taskPackId);
     }
 
     render(){
-        
         return (
         <div className="TaskPack-main" onClick={ this.onTaskPackClicked }>
            {this.props.taskPackName}

@@ -17,7 +17,7 @@ class TaskSet extends Component{
     render(){
         return (
         <div className="TaskSet-main" onClick={ this.onTaskSetClicked }>
-            TaskSet { this.props.number }
+            TaskSet { this.props.taskSetName }
         </div>
         );
     }

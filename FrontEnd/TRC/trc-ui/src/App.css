@@ -43,3 +43,41 @@
   font-size: calc(2px + 2vmin);
   color: #000;
 }
+
+.TaskSection-taskList{
+  background-color: #fff;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: middle;
+  font-size: calc(5px + 2vmin);
+  color: #000;
+}
+
+
+.TaskSetSection-taskSetList{
+  background-color: #fff;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: middle;
+  font-size: calc(5px + 2vmin);
+  border-right: 2px #ccc solid;
+  color: #000;
+  height: 80vh;
+}
+
+.TaskPackSection-taskPackList{
+  background-color: #fff;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: middle;
+  font-size: calc(5px + 2vmin);
+  color: #000;
+  border-right: 2px #ccc solid;
+  height: 80vh;
+}

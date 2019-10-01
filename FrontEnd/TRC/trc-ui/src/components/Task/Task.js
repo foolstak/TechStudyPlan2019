@@ -13,7 +13,7 @@ class Task extends Component{
     render(){
         return (
         <div className="Task-main" onClick={ this.onTaskClicked }>
-            Task { this.props.number }
+            Task { this.props.taskName }
         </div>
         );
     }
