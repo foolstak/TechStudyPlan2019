@@ -44,6 +44,15 @@
   color: #000;
 }
 
+.AddButton{
+  float: right;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  margin-bottom: 3px;
+  margin-right: 3px;
+}
+
 .TaskSection-taskList{
   background-color: #fff;
   width: 30vw;
@@ -80,4 +89,16 @@
   color: #000;
   border-right: 2px #ccc solid;
   height: 80vh;
+}
+
+.TaskSetSection-main{
+  position: relative;
+}
+
+.TaskPackSection-main{
+  position: relative;
+}
+
+.TaskSection-main{
+  position: relative;
 }
