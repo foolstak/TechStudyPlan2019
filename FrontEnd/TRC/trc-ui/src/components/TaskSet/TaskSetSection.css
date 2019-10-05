@@ -1,4 +1,4 @@
-.TaskSetSection-main{
+.TaskSetSection-taskPackList{
     background-color: #fff;
     width: 30vw;
     display: flex;
@@ -10,11 +10,12 @@
     color: #000;
   }
 
-  .TaskSet-row{
-    background:magenta;
-    width: 90%;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 7px 0px 7px 0px;
+  .TaskSetSection-main{
+    position: relative;
+  }
+
+  #addTaskSetButton{
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
