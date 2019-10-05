@@ -1,0 +1,5 @@
+const ADD_TASK = "ADD_TASK";
+const ADD_TASKSET = "ADD_TASKSET";
+const ADD_TASKPACK = "ADD_TASKPACK";
+
+export default { ADD_TASKPACK, ADD_TASK, ADD_TASKSET };

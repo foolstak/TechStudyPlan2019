@@ -8,11 +8,14 @@ const mapStateToProps = state => {
   
   const ConnectedList = ({ taskPacks }) => (
     <ul id="TaskPackList" className="list-group list-group-flush">
-      {taskPacks.map(el => (
+      { taskPacks.length > 0 ? 
+      taskPacks.map(el => (
         <li id="TaskPackListItem" className="list-group-item" key={el.taskPackId}>
           {el.taskPackName}
         </li>
-      ))}
+      )) 
+      : 
+      <p>There are currently no Task Packs defined</p> } 
     </ul>
   );
 

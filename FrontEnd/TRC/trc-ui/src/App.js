@@ -3,31 +3,23 @@ import './App.css';
 import TaskPackList from './components/TaskPack/TaskPackList';
 import TaskList from './components/Task/TaskList';
 import TaskSetList from './components/TaskSet/TaskSetList';
-
-// const tasks = [
-//   {taskId:'t1', taskName:'Run Console Application', parameters:[{parameterName: 'runCommand', parameterValue:'C://Dev/Rates/Apps/ConsoleRunner.exe'}]},
-//   {taskId:'t2', taskName:'Connect to Database', parameters:[{parameterName:'connectionString', parameterValue:'Server=myServerAddress;Database=myDataBase;'},
-//   {parameterName:'userName', parameterValue:'app_owner'}, 
-//   {parameterName:'password',parameterValue:'sa'}]},
-//   {taskId:'t3', taskName:'Run Database query'},
-//   {taskId:'t4', taskName:'Connect to AWS'},
-//   {taskId:'t5', taskName:'Connect to Server'},
-//   {taskId:'t6', taskName:'Post to Server'},
-//   {taskId:'t7', taskName:'Get from Server'},
-//   {taskId:'t8', taskName:'Write file'},
-//   {taskId:'t9', taskName:'Read file'},
-//   {taskId:'t10', taskName:'Connect via FTP'}
-// ];
-
-// const taskSets = [{taskSetId: 'ts1', taskSetName: 'Run Application on Server', taskIdPriorityMap:[{taskId: 't1', priority: 2}, {taskId: 't5', priority: 1}]},
-// {taskSetId: 'ts2', taskSetName: 'Write file to AWS', taskIdPriorityMap:[{taskId: 't4', priority: 1}, {taskId: 't8', priority: 2}]}];
-
-// const taskPacks = [{taskPackId: 'tp1', taskPackName: 'Write To AWS', 
-// taskSetIdPriorityMap:[{taskSetId:'ts1', priority: 1}, {taskSetId:'ts2', priority:2}]},
-// {taskPackId: 'tp2', taskPackName: 'Write To Server', 
-// taskSetIdPriorityMap:[{taskSetId:'ts1', priority: 1}, {taskSetId:'ts2', priority:2}]}];
+import AddTaskPackForm from './components/TaskPack/AddTaskPackForm'
+import Modal from './common/Modal';
 
 class App extends React.Component {
+
+  constructor(){
+    super();
+    this.state = { show: false };
+  }
+
+  showModal = (modalType) => {
+    this.setState({ show: true});
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
 
   // onTaskPackClicked(taskPackId){
   //   this.setState({
@@ -75,35 +67,10 @@ class App extends React.Component {
   }
 
   render(){
-    // this.state.taskPacks.forEach(taskPack => {
-    //     this.state.selectedTaskPacks.push(
-    //     <TaskPack key={ taskPack.taskPackId } 
-    //       taskPackId = { taskPack.taskPackId } 
-    //       taskPackName={ taskPack.taskPackName } 
-    //       taskSetIdPriorityMap={ taskPack.taskSetIdPriorityMap } 
-    //       taskSets = { this.state.taskSets }
-    //       onTaskPackClicked = { this.onTaskPackClicked }/>);
-    // });
-
-    // this.state.taskSets.forEach(taskSet => {
-    //     this.state.selectedTaskSets.push(<TaskSet key={ taskSet.taskSetId }
-    //     taskSetId = { taskSet.taskSetId }
-    //     taskSetName = { taskSet.taskSetName }
-    //     taskIdPriorityMap = { taskSet.taskIdPriorityMap } 
-    //     onTaskSetClicked = { this.onTaskSetClicked }/>);
-    // });
-
-    // this.state.tasks.forEach(task => {
-    //     this.state.selectedTasks.push(<Task key={ task.taskId } 
-    //     taskId={ task.taskId }
-    //     taskName = { task.taskName }
-    //     onTaskClicked = {this.onTaskClicked }/>);
-    // });
-
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Task Runner Central</h1>
+          <h1>Task Runner</h1>
         </header>
         <div id="container" className="App-content">
           <div  className="TaskPackSection-main">
@@ -112,7 +79,7 @@ class App extends React.Component {
               <TaskPackList />
             </div>
             <div id="myButton">
-              <button className="AddButton">
+              <button className="AddButton" onClick={ this.showModal } >
                 Add TaskPack
               </button>
             </div>
@@ -134,7 +101,10 @@ class App extends React.Component {
               <button className="AddButton">
               Add Task
             </button>
-            </div>
+          </div>
+          <Modal show={this.state.show} handleClose={this.hideModal}>
+          <AddTaskPackForm  type={ this.state.modalType }/>
+        </Modal>
         </div>
         <footer className="App-footer">
           <p>This is a footer trial</p>

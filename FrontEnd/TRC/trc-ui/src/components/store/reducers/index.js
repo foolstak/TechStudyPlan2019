@@ -1,4 +1,6 @@
 import ADD_TASK  from '../actions/action-types';
+import ADD_TASKSET  from '../actions/action-types';
+import ADD_TASKPACK  from '../actions/action-types';
 
 const tasks = [
     {taskId:'t1', taskName:'Run Console Application', parameters:[{parameterName: 'runCommand', parameterValue:'C://Dev/Rates/Apps/ConsoleRunner.exe'}]},
@@ -26,10 +28,7 @@ const tasks = [
 const initialState = {
     taskPacks: taskPacks,
     taskSets: taskSets,      
-    tasks: tasks,
-    selectedTaskPacks: taskPacks,
-    selectedTaskSets: taskSets,
-    selectedTasks: tasks,
+    tasks: tasks
   };
 
   function rootReducer(state = initialState, action) {
@@ -37,6 +36,16 @@ const initialState = {
         return Object.assign({}, state, {
             tasks: state.tasks.concat(action.payload)
           });
+      }
+      if(action.type === ADD_TASKSET){
+        return Object.assign({}, state, {
+          taskSets: state.taskSets.concat(action.payload)
+        });
+      }
+      if(action.type === ADD_TASKPACK){
+        return Object.assign({}, state, {
+          taskPacks: state.taskPacks.concat(action.payload)
+        });
       }
     return state;
   };

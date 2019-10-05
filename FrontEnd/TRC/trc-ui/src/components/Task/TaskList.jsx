@@ -7,7 +7,7 @@ const mapStateToProps = state => {
     return { tasks: state.tasks };
   };
   
-  const ConnectedList = ({ tasks }) => (
+  const ConnectedTaskList = ({ tasks }) => (
     <ul id="TaskList" className="list-group list-group-flush">
       {tasks.map(el => (
         <li id="TaskListItem" className="list-group-item" key={el.taskId}>
@@ -17,5 +17,5 @@ const mapStateToProps = state => {
     </ul>
   );
 
-const TaskList = connect(mapStateToProps)(ConnectedList);
+const TaskList = connect(mapStateToProps)(ConnectedTaskList);
 export default TaskList;
