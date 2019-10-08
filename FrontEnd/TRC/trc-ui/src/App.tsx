@@ -6,14 +6,16 @@ import TaskSetList from './components/TaskSet/TaskSetList';
 import AddTaskPackForm from './components/TaskPack/AddTaskPackForm'
 import Modal from './common/Modal';
 
-class App extends React.Component {
+type MyProps = { }
+type MyState = { show: boolean }
+class App extends React.Component<MyProps, MyState> {
 
-  constructor(){
-    super();
+  constructor(props: MyProps){
+    super(props);
     this.state = { show: false };
   }
 
-  showModal = (modalType) => {
+  showModal = (modalType: any) => {
     this.setState({ show: true});
   };
 
@@ -58,13 +60,13 @@ class App extends React.Component {
   //     });
   // }
 
-  onTaskClicked(taskId){
+  // onTaskClicked(taskId){
 
-  }
+  // }
 
-  onTaskSetClicked(taskSetId){
+  // onTaskSetClicked(taskSetId){
 
-  }
+  // }
 
   render(){
     return (
@@ -89,26 +91,26 @@ class App extends React.Component {
             <div className="TaskSetSection-taskSetList">
                <TaskSetList />
             </div>
-            <button className="AddButton">
+            {/* <button className="AddButton">
               Add TaskSet
-            </button>
+            </button> */}
           </div>
           <div className="TaskSection-main">
               <h3>Tasks</h3>
               <div className="TaskSection-taskList">
                 <TaskList />
               </div>
-              <button className="AddButton">
+              {/* <button className="AddButton">
               Add Task
-            </button>
+            </button> */}
           </div>
-          <Modal show={this.state.show} handleClose={this.hideModal}>
-          <AddTaskPackForm  type={ this.state.modalType }/>
-        </Modal>
         </div>
         <footer className="App-footer">
           <p>This is a footer trial</p>
         </footer>
+        <Modal show={this.state.show} handleClose={this.hideModal}>
+          <AddTaskPackForm  />
+        </Modal>
       </div>
     );
   }

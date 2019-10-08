@@ -31,7 +31,7 @@ const initialState = {
     tasks: tasks
   };
 
-  function rootReducer(state = initialState, action) {
+  function rootReducer(state = initialState, action:any) {
       if(action.type === ADD_TASK){
         return Object.assign({}, state, {
             tasks: state.tasks.concat(action.payload)

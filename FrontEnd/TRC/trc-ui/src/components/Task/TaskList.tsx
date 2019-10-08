@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import './Task.css';
 
-const mapStateToProps = state => {
+const mapTaskStateToProps = state => {
     return { tasks: state.tasks };
   };
   
@@ -17,5 +17,5 @@ const mapStateToProps = state => {
     </ul>
   );
 
-const TaskList = connect(mapStateToProps)(ConnectedTaskList);
+const TaskList = connect(mapTaskStateToProps)(ConnectedTaskList);
 export default TaskList;

@@ -1,11 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import './TaskPack.css';
 
+type MyProps = { taskPackName?: string, taskSets: [ {taskSetName: string}], taskPackId: string }
+type MyState = { show: boolean }
 
+class TaskPack extends React.Component<MyProps, MyState>{
 
-class TaskPack extends Component{    
-
-    constructor(props){
+    constructor(props: Readonly<MyProps>){
         super(props);
         this.onTaskPackClicked = this.onTaskPackClicked.bind(this);
     }
@@ -19,7 +20,7 @@ class TaskPack extends Component{
         taskSets.forEach(taskSet => {
             console.log(taskSet.taskSetName);
         });
-        this.props.onTaskPackClicked(this.props.taskPackId);
+        // this.props.onTaskPackClicked(this.props.taskPackId);
     }
 
     render(){

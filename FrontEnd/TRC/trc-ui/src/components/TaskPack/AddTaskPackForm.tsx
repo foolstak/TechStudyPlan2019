@@ -1,18 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addTaskPack } from '../store/actions/actions.js';
+import { addTaskPack } from '../store/actions/actions';
 import uuidv1 from "uuid";
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch: any) {
     return {
-      addTaskPack: taskPack => dispatch(addTaskPack(taskPack))
+      addTaskPack: (taskPack: any) => dispatch(addTaskPack(taskPack))
     };
-  }
+}
 
-class ConnectedForm extends React.Component{
+type MyProps = { addTaskPack : Function }
+type MyState = { taskPackName: string, taskSetIdPriorityMap?: []}
 
-    constructor(){
-        super();
+class ConnectedForm extends React.Component<MyProps, MyState>{
+
+    constructor(props: MyProps){
+        super(props);
         this.state = {
             taskPackName: "", 
             taskSetIdPriorityMap: []
@@ -22,11 +25,12 @@ class ConnectedForm extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);    
     }
 
-    handleChange(event) {
-        this.setState({ [event.target.id]: event.target.value });
+    handleChange(event: any) {
+      let newState: MyState = { taskPackName: event.target.value } ;
+      this.setState(newState);
     }
 
-    handleSubmit(event) {
+    handleSubmit(event: any) {
         event.preventDefault();
         const { taskPackName } = this.state;
         const id = uuidv1();

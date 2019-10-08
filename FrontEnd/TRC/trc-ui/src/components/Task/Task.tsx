@@ -1,7 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import './Task.css';
 
-class Task extends Component{    
+type MyProps = { taskName: string, number: number }
+type MyState = {}
+
+class Task extends React.Component<MyProps, MyState>{
 
     constructor(props){
         super(props);

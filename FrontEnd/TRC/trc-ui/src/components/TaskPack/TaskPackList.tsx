@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import './TaskPack.css';
 
-const mapStateToProps = state => {
+const mapTaskPackStateToProps = state => {
     return { taskPacks: state.taskPacks };
   };
   
@@ -19,5 +19,5 @@ const mapStateToProps = state => {
     </ul>
   );
 
-const TaskPackList = connect(mapStateToProps)(ConnectedList);
+const TaskPackList = connect(mapTaskPackStateToProps)(ConnectedList);
 export default TaskPackList;

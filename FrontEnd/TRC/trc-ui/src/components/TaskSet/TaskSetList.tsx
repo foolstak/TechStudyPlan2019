@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import './TaskSet.css';
 
-const mapStateToProps = state => {
+const mapTaskSetStateToProps = state => {
     return { taskSets: state.taskSets };
   };
   
@@ -16,6 +16,6 @@ const ConnectedTaskSetList = ({ taskSets }) => (
     </ul>
   );
 
-const TaskSetList = connect(mapStateToProps)(ConnectedTaskSetList);
+const TaskSetList = connect(mapTaskSetStateToProps)(ConnectedTaskSetList);
 
 export default TaskSetList;
