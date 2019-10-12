@@ -1,6 +1,4 @@
-import ADD_TASK from './action-types';
-import ADD_TASKSET from './action-types';
-import ADD_TASKPACK from './action-types';
+import { ADD_TASK,  ADD_TASKSET, ADD_TASKPACK} from './action-types';
 
 export function addTaskPack(payload: any) {
   return { type: ADD_TASKPACK, payload }

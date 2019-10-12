@@ -1,6 +1,4 @@
-import ADD_TASK  from '../actions/action-types';
-import ADD_TASKSET  from '../actions/action-types';
-import ADD_TASKPACK  from '../actions/action-types';
+import { ADD_TASK, ADD_TASKSET,  ADD_TASKPACK}  from '../actions/action-types';
 
 const tasks = [
     {taskId:'t1', taskName:'Run Console Application', parameters:[{parameterName: 'runCommand', parameterValue:'C://Dev/Rates/Apps/ConsoleRunner.exe'}]},

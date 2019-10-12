@@ -5,18 +5,20 @@ import TaskList from './components/Task/TaskList';
 import TaskSetList from './components/TaskSet/TaskSetList';
 import AddTaskPackForm from './components/TaskPack/AddTaskPackForm'
 import Modal from './common/Modal';
+import AddTaskSetForm from './components/TaskSet/AddTaskSetForm';
+import AddTaskForm from './components/Task/AddTaskForm';
 
 type MyProps = { }
-type MyState = { show: boolean }
+type MyState = { show: boolean, modalType: string }
 class App extends React.Component<MyProps, MyState> {
 
   constructor(props: MyProps){
     super(props);
-    this.state = { show: false };
+    this.state = { show: false, modalType:"Task" };
   }
 
-  showModal = (modalType: any) => {
-    this.setState({ show: true});
+  showModal = (modalType: string) => {
+    this.setState({ show: true, modalType: modalType});
   };
 
   hideModal = () => {
@@ -81,7 +83,7 @@ class App extends React.Component<MyProps, MyState> {
               <TaskPackList />
             </div>
             <div id="myButton">
-              <button className="AddButton" onClick={ this.showModal } >
+              <button className="AddButton" onClick={()=>this.showModal("taskPack")}>
                 Add TaskPack
               </button>
             </div>
@@ -91,25 +93,29 @@ class App extends React.Component<MyProps, MyState> {
             <div className="TaskSetSection-taskSetList">
                <TaskSetList />
             </div>
-            {/* <button className="AddButton">
+            <button className="AddButton" onClick={()=>this.showModal("taskSet")}>
               Add TaskSet
-            </button> */}
+            </button>
           </div>
           <div className="TaskSection-main">
               <h3>Tasks</h3>
               <div className="TaskSection-taskList">
                 <TaskList />
               </div>
-              {/* <button className="AddButton">
+              <button className="AddButton" onClick={()=>this.showModal("task")}>
               Add Task
-            </button> */}
+            </button>
           </div>
         </div>
         <footer className="App-footer">
           <p>This is a footer trial</p>
         </footer>
         <Modal show={this.state.show} handleClose={this.hideModal}>
-          <AddTaskPackForm  />
+          
+            {this.state.modalType === "TaskPack" ? <AddTaskPackForm  />
+            : this.state.modalType === "TaskSet" ? <AddTaskSetForm />
+            : <AddTaskForm />
+    }
         </Modal>
       </div>
     );
