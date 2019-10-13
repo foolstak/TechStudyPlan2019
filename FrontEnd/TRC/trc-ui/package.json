@@ -6,13 +6,20 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.11",
+    "@types/react": "^16.9.5",
+    "@types/react-dom": "^16.9.1",
+    "@types/react-redux": "^7.1.4",
+    "@types/uuid": "^3.4.5",
     "pretty": "^2.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
     "react-scripts": "3.1.2",
     "react-test-renderer": "^16.9.0",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "typescript": "^3.6.3"
   },
   "scripts": {
     "start": "react-scripts start",
