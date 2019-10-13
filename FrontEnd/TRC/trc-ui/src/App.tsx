@@ -112,8 +112,8 @@ class App extends React.Component<MyProps, MyState> {
         </footer>
         <Modal show={this.state.show} handleClose={this.hideModal}>
           
-            {this.state.modalType === "TaskPack" ? <AddTaskPackForm  />
-            : this.state.modalType === "TaskSet" ? <AddTaskSetForm />
+            {this.state.modalType === "taskPack" ? <AddTaskPackForm  />
+            : this.state.modalType === "taskSet" ? <AddTaskSetForm />
             : <AddTaskForm />
     }
         </Modal>

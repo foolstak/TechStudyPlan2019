@@ -34,7 +34,7 @@ class ConnectedForm extends React.Component<MyProps, MyState>{
         event.preventDefault();
         const { taskSetName } = this.state;
         const id = uuidv1();
-        this.props.addTaskSet({ taskPackId: id, taskPackName: taskSetName, taskIdPriorityMap: [] });
+        this.props.addTaskSet({ taskSetId: id, taskSetName: taskSetName, taskIdPriorityMap: [] });
         this.setState({ taskSetName: "" });
     }
     render() {
@@ -42,7 +42,7 @@ class ConnectedForm extends React.Component<MyProps, MyState>{
         return (
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
-              <label htmlFor="taskPackName">Task Set Name</label>
+              <label htmlFor="taskSetName">Task Set Name</label>
               <input
                 type="text"
                 className="form-control"

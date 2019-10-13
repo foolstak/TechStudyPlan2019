@@ -33,7 +33,7 @@ class ConnectedForm extends React.Component<MyProps, MyState>{
         event.preventDefault();
         const { taskName } = this.state;
         const id = uuidv1();
-        this.props.addTask({ taskPackId: id, taskPackName: taskName, taskIdPriorityMap: [] });
+        this.props.addTask({ taskId: id, taskName: taskName });
         this.setState({ taskName: "" });
     }
     render() {

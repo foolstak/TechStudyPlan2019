@@ -9,6 +9,8 @@ export function addTask(payload: any) {
   };
 
 export function addTaskSet(payload: any) {
+  console.log("Add taskset");
+  console.log(payload);
     return { type: ADD_TASKSET, payload }
 };
 
